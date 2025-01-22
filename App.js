@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, View } from 'react-native';
+import CarnetEstudianteFuncional from './components/CarnetEstudianteFuncional'
 
-export default function App() {
-  return (
+const App = () => {
+  return(
     <View style={styles.container}>
-      <Text>Bienvenidos a censa, mis moachos, se que estan aburridos</Text>
-      <StatusBar style="auto" />
+      <CarnetEstudianteFuncional
+        nombre="Santiago Mesa"
+        identificacion="10171415360"
+        programa="ingenieria de software y datos"
+        foto="https://randomuser.me/api/portraits/men/4.jpg"
+      />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e3f2fd'
   },
 });
+
+export default App;
