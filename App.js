@@ -1,27 +1,19 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
+import { TailwindProvider } from 'nativewind'
 import CarnetEstudianteFuncional from './components/CarnetEstudianteFuncional'
 
 const App = () => {
   return(
-    <View style={styles.container}>
+    <View className="flex-1 items-center justify-center bg-gray-100">
       <CarnetEstudianteFuncional
-        nombre="Santiago Mesa"
-        identificacion="10171415360"
-        programa="ingenieria de software y datos"
-        foto="https://randomuser.me/api/portraits/men/4.jpg"
+        nombre="pepito de los camotes"
+        identificacion="35363538"
+        programa="Cyberseguridad y apps moviles"
+        foto="https://randomuser.me/api/portraits/men/19.jpg"
       />
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#e3f2fd'
-  },
-});
 
 export default App;

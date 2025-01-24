@@ -1,35 +1,22 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, Button, } from 'react-native'
 
-const CarnetEstudianteFuncional = ({ nombre, identificacion, programa, foto }) => {
+const CarnetEstudianteFuncional = () => {
+  const [nombre, setNombre] = useState('Juan Pérez')
+  const [identificacion, setIdentificacion] = useState('202320001')
+  const [programa, SetPrograma] = useState('Ingenieria de Software')
+  const [estado, setEstado] = useState('Activo')
+  const [foto, setFoto] = useState('https://randomuser.me/api/portraits/men/50.jpg');
+
+
   return(
-    <View style={styles.card}>
-      <Image source={{ uri: foto }} style={styles.imagen} />
-      <Text style={styles.nombre}>{nombre}</Text>
-      <Text> ID: {identificacion}</Text>
-      <Text> carrera: {programa}</Text>
+    <View className="p-5 bg-white rounded-lg shadow-lg w-80">
+      <Image source={{ uri: foto }} className="w-32 h-32 rounded-full mx-auto" />
+      <Text className="text-xl font-bold text-center mt-3">{nombre}</Text>
     </View>
+
   )
 }
 
-const styles = StyleSheet.create({
-  card: {
-    padding: 20,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 10,
-    alignItems: 'center',
-    marginVertical: 10,
-  },
-  imagen:{
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
-  },
-  nombre: {
-    fontSize: 22,
-    fontWeight: 'bold'
-  }
-})
 
 export default CarnetEstudianteFuncional;
